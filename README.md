@@ -94,7 +94,15 @@ In this guide, I will document how to install Laravel on Ubuntu.
      mv sobha_2.0 laravel
      cd Laravel
      ```
-   - Copy the example ```.env.example``` file to create a new ```.env``` configuration file to **Set Up Laravel**
+   - **Install Project Dependencies** & Use Composer to install all the Laravel project dependencies
+     ```sh
+     composer install
+     ```
+   - Verify the dependencies have been installed by checking the ```vendor``` folder
+     ```sh
+     ls
+     ```
+   - Copy the example ```.env.example``` file to create a new ```.env``` configuration file to **Set Up Laravel by Configuring the .env File**
      ```sh
      cp .env.example .env
      ```
