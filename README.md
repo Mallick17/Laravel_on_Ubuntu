@@ -102,8 +102,8 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```sh
      vi .env
      ```
-<details>
-<summary>Follow the .env file and setup environment-specific settings to access.</summary>
+   <details>
+   <summary>Follow the .env file and setup environment-specific settings to access.     </summary>
 
 ```env
 APP_NAME=Laravel
