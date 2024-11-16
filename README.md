@@ -102,77 +102,77 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```sh
      vi .env
      ```
-     <details>
-     <summary>Follow the .env file and setup environment specific settings to access.</summary>
-  <br>
-      APP_NAME=Laravel<br>
-      APP_ENV=local<br>
-      APP_KEY=<br>
-      APP_DEBUG=true<br>
-      APP_TIMEZONE=UTC<br>
-      APP_URL=http://localhost<br>
-<br>
-      APP_LOCALE=en<br>
-      APP_FALLBACK_LOCALE=en<br>
-      APP_FAKER_LOCALE=en_US<br>
-<br>
-      APP_MAINTENANCE_DRIVER=file<br>
-      #APP_MAINTENANCE_STORE=database<br>
-<br>
-      PHP_CLI_SERVER_WORKERS=4<br>
-<br>
-      BCRYPT_ROUNDS=12<br>
-<br>
-      LOG_CHANNEL=stack<br>
-      LOG_STACK=single<br>
-      LOG_DEPRECATIONS_CHANNEL=null<br>
-      LOG_LEVEL=debug<br>
-<br>
-      DB_CONNECTION=mysql<br>
-      DB_HOST=127.0.0.1<br>
-      DB_PORT=3306<br>
-      DB_DATABASE=laravel<br>
-      DB_USERNAME=root<br>
-      DB_PASSWORD=password<br>
-<br>
-      SESSION_DRIVER=database<br>
-      SESSION_LIFETIME=120<br>
-      SESSION_ENCRYPT=false<br>
-      SESSION_PATH=/<br>
-      SESSION_DOMAIN=null<br>
-<br>
-      BROADCAST_CONNECTION=log<br>
-      FILESYSTEM_DISK=local<br>
-      QUEUE_CONNECTION=database<br>
-<br>
-      CACHE_STORE=database<br>
-      CACHE_PREFIX=<br>
-<br>
-      MEMCACHED_HOST=127.0.0.1<br>
- <br>  
-      REDIS_CLIENT=phpredis<br>
-      REDIS_HOST=127.0.0.1<br>
-      REDIS_PASSWORD=null<br>
-      REDIS_PORT=6379<br>
-<br>
-      MAIL_MAILER=log<br>
-      MAIL_HOST=127.0.0.1<br>
-      MAIL_PORT=2525<br>
-      MAIL_USERNAME=null<br>
-      MAIL_PASSWORD=null<br>
-      MAIL_ENCRYPTION=null<br>
-      MAIL_FROM_ADDRESS="hello@example.com"<br>
-      MAIL_FROM_NAME="${APP_NAME}"<br>
-<br>
-      AWS_ACCESS_KEY_ID=<br>
-      AWS_SECRET_ACCESS_KEY=<br>
-      AWS_DEFAULT_REGION=us-east-1<br>
-      AWS_BUCKET=<br>
-      AWS_USE_PATH_STYLE_ENDPOINT=false<br>
-<br>
-      VITE_APP_NAME="${APP_NAME}"<br>
+<details>
+<summary>Follow the .env file and setup environment-specific settings to access.</summary>
 
-   </details>
+```env
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=http://localhost
+
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
+
+APP_MAINTENANCE_DRIVER=file
+#APP_MAINTENANCE_STORE=database
+
+PHP_CLI_SERVER_WORKERS=4
+
+BCRYPT_ROUNDS=12
+
+LOG_CHANNEL=stack
+LOG_STACK=single
+LOG_DEPRECATIONS_CHANNEL=null
+LOG_LEVEL=debug
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=password
+
+SESSION_DRIVER=database
+SESSION_LIFETIME=120
+SESSION_ENCRYPT=false
+SESSION_PATH=/
+SESSION_DOMAIN=null
+
+BROADCAST_CONNECTION=log
+FILESYSTEM_DISK=local
+QUEUE_CONNECTION=database
+
+CACHE_STORE=database
+CACHE_PREFIX=
+
+MEMCACHED_HOST=127.0.0.1
+
+REDIS_CLIENT=phpredis
+REDIS_HOST=127.0.0.1
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+
+MAIL_MAILER=log
+MAIL_HOST=127.0.0.1
+MAIL_PORT=2525
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
+
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_BUCKET=
+AWS_USE_PATH_STYLE_ENDPOINT=false
+
+VITE_APP_NAME="${APP_NAME}"
+
 
 
 
