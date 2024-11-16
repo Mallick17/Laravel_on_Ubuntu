@@ -192,6 +192,81 @@ VITE_APP_NAME="${APP_NAME}"
 ```
 </details>
 
+7. **Adjust Laravel permissions**
+   - Assign the ownership of the Laravel project to the www-data user (used by Apache)
+     ```sh
+     chown -R www-data:www-data /var/www/html/laravel
+     ```
+   - Set the correct permissions for the storage directory
+     ```sh
+     chmod -R 775 /var/www/html/laravel/storage
+     ```
+8. **Check & Verify Laravel Installation**
+   - To verify Laravel installation first navigate to the Laravel directory and Run Laravel Artisan to confirm the installation
+     ```sh
+     cd laravel
+     php artisan
+     ```
+9. **Configure Apache Virtual Host**
+    - Navigate to the Apache configuration directory
+      ```sh
+      cd /etc/apache2/sites-available/
+      ```
+   - Create or edit the Laravel configuration file
+     ```sh
+     vi /etc/apache2/sites-available/laravel.conf
+     ```
+     - Add the following configuration to set up the virtual host
+       ```sh
+       <VirtualHost *:80>
+           ServerName 13.233.112.78
+           DocumentRoot /var/www/html/laravel/public
+
+           <Directory /var/www/html/laravel>
+               AllowOverride All
+           </Directory>
+
+           ErrorLog ${APACHE_LOG_DIR}/error.log
+           CustomLog ${APACHE_LOG_DIR}/access.log combined
+       </VirtualHost>
+       ```
+10. **Enable Laravel Site and Apache Modules**
+    - Enable the Laravel virtual host configuration
+      ```sh
+      a2ensite laravel.conf
+      ```
+    - Enable the Apache ```mod_rewrite``` module for URL rewriting
+      ```sh
+      a2enmod rewrite
+      ```
+    - Restart Apache to apply the changes
+      ```sh
+      systemctl restart apache2
+      ```
+11. **Finalize Laravel Setup**
+    - Generate the application key
+      ```sh
+      php artisan key:generate
+      ```
+    - Run database migrations to set up the database schema
+      ```sh
+      php artisan migrate
+      ```
+---
+## Notes:
+1. **Replace ```13.233.112.78``` with our ```server's IP``` address or domain name.**
+2. **Ensure that the ```.env``` file matches your database and application environment settings.**
+3. **After completing these steps, your Laravel application should be accessible at ```http://13.233.112.78```**
+
+
+     
+
+
+     
+
+   
+
+
 
 
 
