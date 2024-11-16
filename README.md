@@ -181,7 +181,7 @@ AWS_USE_PATH_STYLE_ENDPOINT=false
 
 # Vite
 VITE_APP_NAME="${APP_NAME}"
-
+```
 </details>
 
 
