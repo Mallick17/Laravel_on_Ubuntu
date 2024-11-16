@@ -4,7 +4,7 @@ Laravel Application Deployment
 Laravel is a free and open source PHP framework that is used to create web applications. It is based on the Model-View-Controller (MVC) pattern and offers a wide range of features that make the development process faster, easier and more convenient. Laravel remains one of the most popular PHP frameworks due to its flexibility, large community and regular updates. It offers easy-to-use tools for authentication, routing, database management, and more.<br>
 In this guide, I will document how to install Laravel on Ubuntu.
 1. **Update & Upgrade the system**
-   To update system repositories and upgrade any packages, by running the foolowing command
+   - To update system repositories and upgrade any packages, by running the foolowing command
    ```sh
    apt update
    apt upgrade
@@ -46,7 +46,7 @@ In this guide, I will document how to install Laravel on Ubuntu.
      exit
      ```
 4. **Install PHP & Extensions Required for Laravel Project**
-   - PHP is also required for Laravel. Run the following command to install PHP and its extensions
+   - PHP is also required for Laravel. Command to install PHP and its extensions
      ```sh
      apt install php libapache2-mod-php php-mbstring php-cli php-bcmath php-json php-xml php-zip php-pdo php-common php-tokenizer php-mysql
      ```
@@ -54,8 +54,27 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```sh
      apt-get install php-curl
      ```
-   - To check if PHP was installed on our server, run the following command
+   - To check if PHP was installed on our server,
      ```sh
      php --version
      ```
 5. **Install Composer**  
+   - we need to install Composer which is package manager for PHP.
+     ```sh
+     curl -sS https://getcomposer.org/installer | php
+     ```
+   - Now we need to move the downloaded file ```composer.phar``` to the ```usr/local/bin/```
+     ```sh
+     mv composer.phar /usr/local/bin/composer
+     ```
+   - Give the composer execute rights
+     ```sh
+     chmod +x /usr/local/bin/composer
+     ```
+   - To check if Composer was installed
+     ```sh
+     composer --version
+     ```
+6. **Install Laravel**
+   - Change the working directory to the ```/var/www/html```
+     
