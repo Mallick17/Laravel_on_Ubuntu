@@ -102,6 +102,7 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```sh
      vi .env
      ```
+     <details>
    - <summary>Follow the .env file and setup environment specific settings to access.</summary>
      ```sh
       APP_NAME=Laravel
@@ -171,7 +172,7 @@ In this guide, I will document how to install Laravel on Ubuntu.
 
       VITE_APP_NAME="${APP_NAME}"
      ```
-
+    </details>
 
 
 
