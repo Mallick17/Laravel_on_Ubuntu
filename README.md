@@ -102,10 +102,12 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```sh
      vi .env
      ```
-   <details>
-   <summary>Follow the .env file and setup environment-specific settings to access.     </summary>
+     <details>
+<summary>Follow the .env file and setup environment specific settings to access.</summary>
+<br>
 
 ```env
+# Application settings
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=
@@ -118,17 +120,20 @@ APP_FALLBACK_LOCALE=en
 APP_FAKER_LOCALE=en_US
 
 APP_MAINTENANCE_DRIVER=file
-# APP_MAINTENANCE_STORE=database
+#APP_MAINTENANCE_STORE=database
 
 PHP_CLI_SERVER_WORKERS=4
 
+# Security and encryption
 BCRYPT_ROUNDS=12
 
+# Logging configuration
 LOG_CHANNEL=stack
 LOG_STACK=single
 LOG_DEPRECATIONS_CHANNEL=null
 LOG_LEVEL=debug
 
+# Database configuration
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -136,26 +141,28 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=password
 
+# Session settings
 SESSION_DRIVER=database
 SESSION_LIFETIME=120
 SESSION_ENCRYPT=false
 SESSION_PATH=/
 SESSION_DOMAIN=null
 
+# Queue and caching
 BROADCAST_CONNECTION=log
 FILESYSTEM_DISK=local
 QUEUE_CONNECTION=database
-
 CACHE_STORE=database
 CACHE_PREFIX=
 
+# Redis configuration
 MEMCACHED_HOST=127.0.0.1
-
 REDIS_CLIENT=phpredis
 REDIS_HOST=127.0.0.1
 REDIS_PASSWORD=null
 REDIS_PORT=6379
 
+# Mail settings
 MAIL_MAILER=log
 MAIL_HOST=127.0.0.1
 MAIL_PORT=2525
@@ -165,12 +172,14 @@ MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS="hello@example.com"
 MAIL_FROM_NAME="${APP_NAME}"
 
+# AWS S3 Configuration
 AWS_ACCESS_KEY_ID=
 AWS_SECRET_ACCESS_KEY=
 AWS_DEFAULT_REGION=us-east-1
 AWS_BUCKET=
 AWS_USE_PATH_STYLE_ENDPOINT=false
 
+# Vite
 VITE_APP_NAME="${APP_NAME}"
 
 
