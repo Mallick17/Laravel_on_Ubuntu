@@ -104,20 +104,21 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```
      <details>
      <summary>Follow the .env file and setup environment specific settings to access.</summary>
-      ```sh
-      APP_NAME=Laravel
-      APP_ENV=local
-      APP_KEY=
-      APP_DEBUG=true
-      APP_TIMEZONE=UTC
-      APP_URL=http://localhost
+        - According to my project my configuration is
+   ```sh
+      APP_NAME=Laravel<br>
+      APP_ENV=local<br>
+      APP_KEY=<br>
+      APP_DEBUG=true<br>
+      APP_TIMEZONE=UTC<br>
+      APP_URL=http://localhost<br>
 
-      APP_LOCALE=en
+      APP_LOCALE=en<br>
       APP_FALLBACK_LOCALE=en
       APP_FAKER_LOCALE=en_US
 
       APP_MAINTENANCE_DRIVER=file
-      # APP_MAINTENANCE_STORE=database
+      #APP_MAINTENANCE_STORE=database
 
       PHP_CLI_SERVER_WORKERS=4
 
@@ -171,8 +172,8 @@ In this guide, I will document how to install Laravel on Ubuntu.
       AWS_USE_PATH_STYLE_ENDPOINT=false
 
       VITE_APP_NAME="${APP_NAME}"
-      ```
-    </details>
+    ```
+   </details>
 
 
 
