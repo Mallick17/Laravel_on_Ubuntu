@@ -104,7 +104,6 @@ In this guide, I will document how to install Laravel on Ubuntu.
      ```
      <details>
      <summary>Follow the .env file and setup environment specific settings to access.</summary>
-        - According to my project my configuration is
   <br>
       APP_NAME=Laravel<br>
       APP_ENV=local<br>
