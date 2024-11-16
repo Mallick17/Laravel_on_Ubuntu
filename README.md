@@ -103,8 +103,8 @@ In this guide, I will document how to install Laravel on Ubuntu.
      vi .env
      ```
      <details>
-   - <summary>Follow the .env file and setup environment specific settings to access.</summary>
-     ```sh
+     <summary>Follow the .env file and setup environment specific settings to access.</summary>
+      ```sh
       APP_NAME=Laravel
       APP_ENV=local
       APP_KEY=
@@ -171,7 +171,7 @@ In this guide, I will document how to install Laravel on Ubuntu.
       AWS_USE_PATH_STYLE_ENDPOINT=false
 
       VITE_APP_NAME="${APP_NAME}"
-     ```
+      ```
     </details>
 
 
