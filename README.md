@@ -253,6 +253,66 @@ VITE_APP_NAME="${APP_NAME}"
       php artisan migrate
       ```
 ---
+# Securing a Laravel Application with Free SSL on Apache2
+### 1. Laravel Virtual Host Configuration
+- The virtual host configuration file for the Laravel application is located at:
+  ```bash
+  /etc/apache2/sites-available/laravel.conf
+  ```
+- File Contents:
+  ```apache
+  <VirtualHost *:80>
+    ServerName sobhaofficial.com
+    DocumentRoot /var/www/html/laravel/public
+
+    <Directory /var/www/html/laravel>
+        AllowOverride All
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+  </VirtualHost>
+  ```
+  - **Key Details**:
+    - **ServerName**: `sobhaofficial.com` (the domain for the Laravel application).
+    - **DocumentRoot**: Points to Laravel’s `public` directory.
+    - **AllowOverride All**: Allows `.htaccess` functionality for Laravel's routing.
+### 2. System Update and Certbot Installation
+- Update the system and install Certbot with its Apache plugin to manage SSL certificates.
+  ```bash
+  sudo apt update
+  sudo apt install certbot python3-certbot-apache -y ##install Certbot
+  ```
+### 3. Obtain and Configure SSL Certificate
+- Use Certbot to request a free SSL certificate from Let's Encrypt and configure it automatically with Apache.
+  ```bash
+  sudo certbot --apache -d sobhaofficial.com
+  ```
+- **Process**:
+  - Certbot detects the Laravel virtual host file (`laravel.conf`).
+  - Follow the prompts:
+    - Enter your email address for notifications.
+    - Agree to the terms and conditions.
+    - Press Enter, Ouput at End:-
+      ```bash
+      Deploying certificate
+      Successfully deployed certificate for sobhaofficial.com to /etc/apache2/sites-available/laravel-le-ssl.conf
+      Congratulations! You have successfully enabled HTTPS on https://sobhaofficial.com
+      ```
+### 4. Verify HTTPS Access
+- Open a web browser and visit:
+  ```plaintext
+  https://sobhaofficial.com
+  ```
+- Ensure the connection is secure by checking for the padlock icon in the browser's address bar.
+### 5. Test Automatic SSL Renewal
+- Let's Encrypt SSL certificates are valid for 90 days. Certbot includes a timer to automatically renew certificates. Test this functionality to ensure proper setup.
+  ```bash
+  sudo certbot renew --dry-run
+  ```
+  - Expected Output: If the renewal test completes without errors, the automatic renewal is working correctly.
+
+---
 ## Notes:
 1. **Replace ```13.233.112.78``` with our ```server's IP``` address or domain name.**
 2. **Ensure that the ```.env``` file matches your database and application environment settings.**
